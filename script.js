@@ -4,7 +4,7 @@
 
 function load() {
   var btns = document.querySelectorAll("#calculator span");
-  var operators = ["+", "-", "x", "÷"];
+  var operators = ["+", "-", "x", "Ã·"];
   var inputScreen = document.querySelector("#screen");
   var btnValue;
   var input;
@@ -26,7 +26,7 @@ function load() {
           var lastChar = input[input.length - 1];
 
           // Replace x to *, + to / which could be calculated in eval
-          input = input.replace(/x/g, "*").replace(/÷/g, "/");
+          input = input.replace(/x/g, "*").replace(/Ã·/g, "/");
 
           // Checking the last character of the input.
           // If it's an operator or a decimal, remove it
@@ -50,7 +50,7 @@ function load() {
         case "+":
         case "-":
         case "x":
-        case "÷":
+        case "Ã·":
           // Last char of string
           var lastChar = input[input.length - 1];
 
